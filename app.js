@@ -55,4 +55,30 @@ ourForm.addEventListener("submit",function(e)
          state.wrongAnswers++;
          mistakesAllowed.textContent=2-state.wrongAnswers;
     }
+    winOrLose()
 })
+
+function winOrLose()
+{
+    if(state.score==10)
+    {
+        alert("You won!");
+        restartGame();
+    }
+
+    if(state.wrongAnswers==3)
+    {
+        alert("You Lose!");
+        restartGame()
+    }
+}
+
+function restartGame()
+{
+    updateProblem();
+    state.score=0;
+    state.wrongAnswers=0;
+
+    pointsNeeded.textContent=10;
+    mistakesAllowed.textContent=2;
+}
