@@ -6,15 +6,38 @@
     <title>JS MATH QUIZ</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body >
     <div class="container">
-        <div class="question"></div>
+        <p class="question"></p>
         <form action="" class="our-form">
             <input type="text" class="our-field" autocomplete="off">
             <button type="submit">Submit</button>
         </form>
 
-        <p>You need <span class="points-needed">10</span> more points, and are allowed to make <span class="mistakes-allowed">2</span> more mistakes</p>
+        <p class="status">You need <span class="points-needed">10</span> more points, and are allowed to make <span class="mistakes-allowed">2</span> more mistakes</p>
+
+        <div class="progress">
+            <div class="boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="progress-inner"></div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="overlay-inner">
+            <p class="end-message">Congrats, You Won!</p>
+            <button class="restart-game">Start Over</button>
+        </div>
     </div>
     <script src="./app.js"></script>
 </body>
